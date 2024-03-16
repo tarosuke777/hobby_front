@@ -15,9 +15,14 @@ export default function registerPage() {
       <Link href="/designer">toList</Link>
       <div className="container">
         <form action={createTask}>
-          <label>name</label>
-          <input type="text" name="name" />
-          <input type="file" name="image" />
+          <div>
+            <label>name</label>
+            <input type="text" name="name" />
+          </div>
+          <div>
+            <label>sampleImage</label>
+            <input type="file" name="image" />
+          </div>
           <button type="submit">register</button>
         </form>
       </div>

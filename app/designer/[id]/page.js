@@ -13,9 +13,6 @@ export default async function DesignerIdPage({ params }) {
 
   async function createTask(formData) {
     "use server";
-    // const id = await formData.get("id");
-    // const name = await formData.get("name");
-    // await modifyDesigner(id, name);
     await modifyDesignerWithImage(formData);
     redirect("/designer");
   }
@@ -26,10 +23,18 @@ export default async function DesignerIdPage({ params }) {
       <Link href="/designer">toList</Link>
       <div className="container">
         <form action={createTask}>
-          <label>name</label>
-          <input type="text" name="id" defaultValue={designer.id} />
-          <input type="text" name="name" defaultValue={designer.name} />
-          <input type="file" name="image" />
+          <div>
+            <label>id</label>
+            <input type="text" name="id" defaultValue={designer.id} />
+          </div>
+          <div>
+            <label>name</label>
+            <input type="text" name="name" defaultValue={designer.name} />
+          </div>
+          <div>
+            <label>sampleImage</label>
+            <input type="file" name="image" />
+          </div>
           <button type="submit">modify</button>
         </form>
       </div>

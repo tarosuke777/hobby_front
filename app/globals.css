@@ -51,3 +51,7 @@ h2 {
   padding-left: 10px;
   border-left: 7px solid #3cb3e4;
 }
+
+label {
+  margin-right: 10px;
+}
