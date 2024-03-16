@@ -2,7 +2,6 @@ import { deleteDesigner, getDesigners } from "../_utils/designers";
 import Link from "next/link";
 import { revalidatePath } from "next/cache";
 import Modal from "./modal";
-import "./page.module.css";
 
 export default async function designerPage() {
   const designers = await getDesigners();
