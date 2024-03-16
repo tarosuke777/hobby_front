@@ -16,7 +16,7 @@ export default function Modal(props) {
   };
 
   return (
-    <div>
+    <>
       <a href="#" onClick={openModal}>
         <Image src={props.image_url} width={50} height={50} alt="" />
       </a>
@@ -26,6 +26,6 @@ export default function Modal(props) {
       >
         <img src={props.image_url} />
       </div>
-    </div>
+    </>
   );
 }
