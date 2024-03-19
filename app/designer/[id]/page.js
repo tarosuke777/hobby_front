@@ -29,6 +29,14 @@ export default async function DesignerIdPage({ params }) {
             <input type="text" name="name" defaultValue={designer.name} />
           </div>
           <div>
+            <label>externalLink</label>
+            <input
+              type="text"
+              name="external_link"
+              defaultValue={designer.external_link}
+            />
+          </div>
+          <div>
             <label>sampleImage</label>
             <input type="file" name="image" />
           </div>
