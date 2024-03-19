@@ -35,8 +35,8 @@ export default async function designerPage() {
                 <Link href={`/designer/${designer.id}`}>{designer.name}</Link>
               </td>
               <td>
-                <a href={designer.name} target="_brank">
-                  {designer.name}
+                <a href={designer.external_link} target="_brank">
+                  {designer.external_link}
                 </a>
               </td>
               <td>

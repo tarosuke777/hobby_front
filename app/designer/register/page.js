@@ -20,6 +20,10 @@ export default function registerPage() {
             <input type="text" name="name" />
           </div>
           <div>
+            <label>externalLink</label>
+            <input type="text" name="external_link" />
+          </div>
+          <div>
             <label>sampleImage</label>
             <input type="file" name="image" />
           </div>
