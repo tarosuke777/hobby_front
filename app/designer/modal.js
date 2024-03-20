@@ -4,6 +4,10 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 export default function Modal(props) {
+  if (props.image_url == null) {
+    return <></>;
+  }
+
   const [modal, setModal] = useState(false);
 
   const openModal = (e) => {
