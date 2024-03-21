@@ -10,7 +10,14 @@ export default async function DesignerIdPage({ params }) {
 
   async function createTask(formData) {
     "use server";
-    await modifyDesignerWithImage(formData);
+    const sendFormData = new FormData();
+    sendFormData.append("id", formData.get("id"));
+    sendFormData.append("name", formData.get("name"));
+    sendFormData.append("external_link", formData.get("external_link"));
+    if (formData.get("image").size != 0) {
+      sendFormData.append("image", formData.get("image"));
+    }
+    await modifyDesignerWithImage(sendFormData);
     redirect("/designer");
   }
 
