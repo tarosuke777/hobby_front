@@ -14,6 +14,11 @@ export default async function DesignerIdPage({ params }) {
     sendFormData.append("id", formData.get("id"));
     sendFormData.append("name", formData.get("name"));
     sendFormData.append("external_link", formData.get("external_link"));
+
+    if (formData.get("image_delete") == "on") {
+      sendFormData.append("image_delete", formData.get("image_delete"));
+    }
+
     if (formData.get("image").size != 0) {
       sendFormData.append("image", formData.get("image"));
     }
@@ -49,6 +54,7 @@ export default async function DesignerIdPage({ params }) {
           </div>
           <div>
             <label>currentSampleImage</label>
+            <input type="checkbox" name="image_delete" />
             <Modal image_url={designer.image_url} />
           </div>
           <button type="submit">modify</button>
