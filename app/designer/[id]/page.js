@@ -22,7 +22,8 @@ export default async function DesignerIdPage({ params }) {
     if (formData.get("image").size != 0) {
       sendFormData.append("image", formData.get("image"));
     }
-    await modifyDesignerWithImage(sendFormData);
+
+    // await modifyDesignerWithImage(sendFormData);
     redirect("/designer");
   }
 
@@ -34,7 +35,7 @@ export default async function DesignerIdPage({ params }) {
         <form action={createTask}>
           <div>
             <label>id</label>
-            <input type="text" name="id" defaultValue={designer.id} />
+            <input type="text" name="id" defaultValue={designer.id} readOnly />
           </div>
           <div>
             <label>name</label>
