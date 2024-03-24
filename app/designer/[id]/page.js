@@ -23,7 +23,7 @@ export default async function DesignerIdPage({ params }) {
       sendFormData.append("image", formData.get("image"));
     }
 
-    // await modifyDesignerWithImage(sendFormData);
+    await modifyDesignerWithImage(sendFormData);
     redirect("/designer");
   }
 
