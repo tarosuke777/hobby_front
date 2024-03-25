@@ -54,4 +54,6 @@ h2 {
 
 label {
   margin-right: 10px;
+  display: inline-block;
+  width: 160px;
 }
