@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getDesigner, modifyDesignerWithImage } from "../../_utils/designers";
 import { redirect } from "next/navigation";
 import Modal from "../modal";
+import File from "../file";
 
 export default async function DesignerIdPage({ params }) {
   const { id } = params;
@@ -51,7 +52,8 @@ export default async function DesignerIdPage({ params }) {
           </div>
           <div>
             <label>sampleImage</label>
-            <input type="file" name="image" />
+            <File />
+            {/* <input type="file" name="image" /> */}
           </div>
           <div>
             <label>currentSampleImage</label>
